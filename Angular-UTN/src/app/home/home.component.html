@@ -1,1 +1,18 @@
-<h3>Componente Home</h3>
+<div *ngIf="loading" class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<div *ngIf="!loading">
+  <div class="row">
+    <div *ngFor="let producto of productos | async" class="col-md-4 p-2 text-center">
+      <div class="card">
+        <img src={{producto.image}} class="card-img-top " alt={{producto.title}}>
+        <div class="card-body" style="height: 15rem;">
+          <h5 class="card-title">{{producto.title}}</h5>
+          <p class="card-text">{{ producto.price | currency : "" : "symbol-narrow" : "" }}</p>
+          <a href="#" class="btn btn-primary ">Description</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
