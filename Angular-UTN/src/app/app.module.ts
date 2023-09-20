@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HomeComponent } from './pages/home/home.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistroComponent } from './registro/registro.component';
-import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { LoginComponent } from './pages/login/login.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { DetalleComponent } from './pages/detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     RegistroComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    DetalleComponent,
   ],
   imports: [
     BrowserModule,
